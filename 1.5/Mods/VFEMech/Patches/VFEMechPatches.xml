@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ThingDef[defName="VFE_Turret_AutoChargeBlaster"]/researchPrerequisites</xpath>
+		    <value>
+    			<researchPrerequisites>
+      				<li>SniperTurret</li>
+					<li>VFE_AutomatedDefensiveMeasures</li>
+    			</researchPrerequisites>
+		    </value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ThingDef[defName="VFE_Turret_AutoChargeLance"]/researchPrerequisites</xpath>
+		    <value>
+    			<researchPrerequisites>
+      				<li>SniperTurret</li>
+					<li>VFE_AutomatedDefensiveMeasures</li>
+    			</researchPrerequisites>
+		    </value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ThingDef[defName="VFE_Turret_AutoInfernoCannon"]/researchPrerequisites</xpath>
+		    <value>
+    			<researchPrerequisites>
+      				<li>SniperTurret</li>
+					<li>VFE_AutomatedDefensiveMeasures</li>
+    			</researchPrerequisites>
+		    </value>
+		  </li>
+		  <li Class="PatchOperationAdd">
+        	<xpath>Defs/ThingDef[defName="VFE_Turret_AutoMortar"]</xpath>
+		    <value>
+    			<researchPrerequisites>
+      				<li>SniperTurret</li>
+    			</researchPrerequisites>
+		    </value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ThingDef[defName="VFE_Turret_AutoTesla"]/researchPrerequisites</xpath>
+		    <value>
+    			<researchPrerequisites>
+      				<li>SniperTurret</li>
+					<li>VFE_AutomatedDefensiveMeasures</li>
+    			</researchPrerequisites>
+		    </value>
+		  </li>
+		</operations>
+	</Operation>
+</Patch>
+
+
+

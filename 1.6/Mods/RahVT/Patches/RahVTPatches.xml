@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+        <li Class="PatchOperationAttributeAdd">
+               <xpath>Defs/ResearchProjectDef[defName="GunComplex"]</xpath>
+               <attribute>Abstract</attribute>
+               <value>True</value>
+         </li>
+        <li Class="PatchOperationAttributeAdd">
+               <xpath>Defs/ResearchProjectDef[defName="RocketComplex"]</xpath>
+               <attribute>Abstract</attribute>
+               <value>True</value>
+         </li>
+        <li Class="PatchOperationAttributeAdd">
+               <xpath>Defs/ResearchProjectDef[defName="MilitaryTurret"]</xpath>
+               <attribute>Abstract</attribute>
+               <value>True</value>
+         </li>
+        <li Class="PatchOperationAttributeAdd">
+               <xpath>Defs/ResearchProjectDef[defName="PrecisionTurret"]</xpath>
+               <attribute>Abstract</attribute>
+               <value>True</value>
+         </li>
+        <li Class="PatchOperationAttributeAdd">
+               <xpath>Defs/ResearchProjectDef[defName="BlastTurret"]</xpath>
+               <attribute>Abstract</attribute>
+               <value>True</value>
+         </li>
+        <li Class="PatchOperationAttributeAdd">
+               <xpath>Defs/ResearchProjectDef[defName="VulcanCannon"]</xpath>
+               <attribute>Abstract</attribute>
+               <value>True</value>
+         </li>
+        <li Class="PatchOperationAttributeAdd">
+               <xpath>Defs/ResearchProjectDef[defName="ChargeCannon"]</xpath>
+               <attribute>Abstract</attribute>
+               <value>True</value>
+         </li>
+        <li Class="PatchOperationAttributeAdd">
+               <xpath>Defs/ResearchProjectDef[defName="DevastatorMortar"]</xpath>
+               <attribute>Abstract</attribute>
+               <value>True</value>
+         </li>
+        <li Class="PatchOperationAttributeAdd">
+               <xpath>Defs/ResearchTabDef[defName="RVTE"]</xpath>
+               <attribute>Abstract</attribute>
+               <value>True</value>
+         </li>
+		  <li Class="PatchOperationRemove">
+        	<xpath>Defs/ThingDef[defName="PrecisionTurretGun"]/comps/li[@Class="CompProperties_Glower"]</xpath>
+		  </li>
+		  <li Class="PatchOperationRemove">
+        	<xpath>Defs/ThingDef[defName="MilitaryTurretGun"]/comps/li[@Class="CompProperties_Glower"]</xpath>
+		  </li>
+		  <li Class="PatchOperationRemove">
+        	<xpath>Defs/ThingDef[defName="BlastTurretGun"]/comps/li[@Class="CompProperties_Glower"]</xpath>
+		  </li>
+		  <li Class="PatchOperationRemove">
+        	<xpath>Defs/ThingDef[defName="ShredderTurretGun"]/comps/li[@Class="CompProperties_Glower"]</xpath>
+		  </li>
+		  <li Class="PatchOperationRemove">
+        	<xpath>Defs/ThingDef[defName="VulcanCannon"]/comps/li[@Class="CompProperties_Glower"]</xpath>
+		  </li>
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "VulcanCannon"]/building</xpath>
+			<value>
+      			<turretBurstWarmupTime>0</turretBurstWarmupTime>
+			</value>
+		  </li>
+  		  <li Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName = "VulcanCannon"]/building/turretTopDrawSize</xpath>
+    		<match Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "VulcanCannon"]/building/turretTopDrawSize</xpath>
+		    <value>
+      			<turretTopDrawSize>2.25</turretTopDrawSize>
+		    </value>
+    		</match>
+  		  </li>
+  		  <li Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName = "VulcanCannon"]/building/turretTopDrawSize</xpath>
+    		<match Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "VulcanCannon"]/graphicData/drawSize</xpath>
+		    <value>
+      			<drawSize>(3.75,3.75)</drawSize>
+		    </value>
+    		</match>
+  		  </li>
+  		  <li Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName = "VulcanCannon"]/building/turretTopDrawSize</xpath>
+    		<match Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "VulcanCannon"]/building/turretTopOffset</xpath>
+		    <value>
+				<turretTopOffset>(0,0.45</turretTopOffset>
+		    </value>
+    		</match>
+  		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "ShredderTurretGun"]/graphicData/drawSize</xpath>
+		    <value>
+      			<drawSize>(3.4,3.4)</drawSize>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "ShredderTurretGun"]/building</xpath>
+		    <value>
+      			<turretTopDrawSize>1.7</turretTopDrawSize>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "BlastTurretGun"]/graphicData/drawSize</xpath>
+		    <value>
+      			<drawSize>(3.4,3.4)</drawSize>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "BlastTurretGun"]/building</xpath>
+		    <value>
+      			<turretTopDrawSize>1.7</turretTopDrawSize>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "ShredderTurretGun"]/castEdgeShadows</xpath>
+		    <value>
+    			<castEdgeShadows>false</castEdgeShadows>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "BlastTurretGun"]/castEdgeShadows</xpath>
+		    <value>
+    			<castEdgeShadows>false</castEdgeShadows>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "VulcanCannon"]/castEdgeShadows</xpath>
+		    <value>
+    			<castEdgeShadows>false</castEdgeShadows>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "PrecisionTurretGun"]/castEdgeShadows</xpath>
+		    <value>
+    			<castEdgeShadows>false</castEdgeShadows>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "Turret_DevastatorMortarBomb"]/castEdgeShadows</xpath>
+		    <value>
+    			<castEdgeShadows>false</castEdgeShadows>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "MilitaryTurretGun"]/castEdgeShadows</xpath>
+		    <value>
+    			<castEdgeShadows>false</castEdgeShadows>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "ChargeCannon"]/castEdgeShadows</xpath>
+		    <value>
+    			<castEdgeShadows>false</castEdgeShadows>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "BlastTurretGun"]/graphicData</xpath>
+		    <value>
+      			<shadowData>
+        			<volume>(0.65,0.65,0.65)</volume>
+        			<offset>(0,0,0)</offset>
+      			</shadowData>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "PrecisionTurretGun"]/graphicData</xpath>
+		    <value>
+      			<shadowData>
+        			<volume>(0.4,0.4,0.4)</volume>
+        			<offset>(0,0,0)</offset>
+      			</shadowData>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "MilitaryTurretGun"]/graphicData</xpath>
+		    <value>
+      			<shadowData>
+        			<volume>(0.35,0.35,0.35)</volume>
+        			<offset>(0,0,0)</offset>
+      			</shadowData>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "ShredderTurretGun"]/graphicData</xpath>
+		    <value>
+      			<shadowData>
+        			<volume>(0.7,0.7,0.7)</volume>
+        			<offset>(0,0,0)</offset>
+      			</shadowData>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "Turret_DevastatorMortarBomb"]/graphicData</xpath>
+		    <value>
+      			<shadowData>
+        			<volume>(0.75,0.75,0.75)</volume>
+        			<offset>(0,0,0)</offset>
+      			</shadowData>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "VulcanCannon"]/graphicData</xpath>
+		    <value>
+      			<shadowData>
+        			<volume>(2.4,2.4,2.4)</volume>
+        			<offset>(0,0,0)</offset>
+      			</shadowData>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "ChargeCannon"]/graphicData</xpath>
+		    <value>
+      			<shadowData>
+        			<volume>(2,2,2)</volume>
+        			<offset>(0,0,0)</offset>
+      			</shadowData>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "PrecisionTurretGun"]/building</xpath>
+		    <value>
+      			<turretTopDrawSize>1.8</turretTopDrawSize>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "Gun_TurretPrecision"]/verbs/li/range</xpath>
+		    <value>
+      			<range>40</range>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "Gun_TurretPrecision"]/verbs/li</xpath>
+		    <value>
+      			<minRange>3</minRange>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "PrecisionTurretGun"]/costList</xpath>
+		    <value>
+    			<costList>
+      				<Steel>150</Steel>
+      				<Plasteel>10</Plasteel>
+      				<ComponentIndustrial>5</ComponentIndustrial>
+    			</costList>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "PrecisionTurretGun"]/costStuffCount</xpath>
+		    <value>
+    			<costStuffCount>50</costStuffCount>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName = "PrecisionTurretGun"]/specialDisplayRadius</xpath>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "Bullet_TurretPrecision"]/projectile/damageAmountBase</xpath>
+		    <value>
+     			<damageAmountBase>32</damageAmountBase>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "PrecisionTurretGun"]/building/turretBurstCooldownTime</xpath>
+		    <value>
+     			<turretBurstCooldownTime>2.6</turretBurstCooldownTime>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "BlastTurretGun"]/costList</xpath>
+		    <value>
+    			<costList>
+      				<Steel>150</Steel>
+      				<Plasteel>5</Plasteel>
+      				<ComponentIndustrial>5</ComponentIndustrial>
+      				<Weapon_GrenadeFrag>2</Weapon_GrenadeFrag>
+    			</costList>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "BlastTurretGun"]/comps/li[@Class="CompProperties_Refuelable"]/fuelMultiplier</xpath>
+		    <value>
+     			<fuelMultiplier>20</fuelMultiplier>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "VulcanCannon"]/comps/li[@Class="CompProperties_Refuelable"]/fuelMultiplier</xpath>
+		    <value>
+     			<fuelMultiplier>3</fuelMultiplier>
+		    </value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ThingDef[defName="VulcanCannon"]/researchPrerequisites</xpath>
+		    <value>
+    			<researchPrerequisites>
+      				<li>StandardSecurity</li>
+					<li>MultibarrelWeapons</li>
+    			</researchPrerequisites>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "ShredderTurretGun"]/costList</xpath>
+		    <value>
+    			<costList>
+      				<Steel>200</Steel>
+      				<ComponentIndustrial>5</ComponentIndustrial>
+    			</costList>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "Gun_VulcanCannon"]/verbs/li/range</xpath>
+		    <value>
+      			<range>37.9</range>
+		    </value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "Gun_VulcanCannon"]/verbs/li/ticksBetweenBurstShots</xpath>
+			<value>
+      			<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+			</value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "Bullet_VulcanCannon"]/projectile/damageAmountBase</xpath>
+			<value>
+      			<damageAmountBase>10</damageAmountBase>
+			</value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "Gun_BlastCharge"]/verbs/li/range</xpath>
+		    <value>
+      			<range>24</range>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "Gun_TurretMilitary"]/verbs/li/range</xpath>
+		    <value>
+      			<range>31</range>
+		    </value>
+		  </li>
+    	  <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName = "VulcanCannon"]/specialDisplayRadius</xpath>
+		  </li>
+    	  <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName = "BlastTurretGun"]/specialDisplayRadius</xpath>
+		  </li>
+    	  <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName = "MilitaryTurretGun"]/specialDisplayRadius</xpath>
+		  </li>
+		  <li Class="PatchOperationReplace">
+		    <xpath>/Defs/ThingDef[defName = "VulcanCannon"]/researchPrerequisites</xpath>
+		    <value>
+				<researchPrerequisites>
+					<li>SniperTurret</li>
+					<li>MultibarrelWeapons</li>
+				</researchPrerequisites>
+		    </value>
+		  </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="VulcanCannonManned"]</xpath>
+        </li>
+		  <li Class="PatchOperationReplace">
+		    <xpath>/Defs/ThingDef[defName = "ChargeCannon"]/researchPrerequisites</xpath>
+		    <value>
+				<researchPrerequisites>
+					<li>SpacerSecurity</li>
+				</researchPrerequisites>
+		    </value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ThingDef[defName="MilitaryTurretGun"]/researchPrerequisites</xpath>
+		    <value>
+    			<researchPrerequisites>
+      				<li>StandardSecurity</li>
+    			</researchPrerequisites>
+		    </value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ThingDef[defName="MilitaryTurretGun"]/label</xpath>
+		    <value>
+          		<label>refined mini-turret</label>
+			</value>
+		  </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="MilitaryTurretGunManned"]</xpath>
+        </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ThingDef[defName="ShredderTurretGun"]/researchPrerequisites</xpath>
+		    <value>
+    			<researchPrerequisites>
+      				<li>StandardSecurity</li>
+    			</researchPrerequisites>
+		    </value>
+		  </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="ShredderTurretGunManned"]</xpath>
+        </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ThingDef[defName="PrecisionTurretGun"]/researchPrerequisites</xpath>
+		    <value>
+    			<researchPrerequisites>
+      				<li>StandardSecurity</li>
+					<li>PrecisionRifling</li>
+    			</researchPrerequisites>
+		    </value>
+		  </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="PrecisionTurretGunManned"]</xpath>
+        </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ThingDef[defName="BlastTurretGun"]/researchPrerequisites</xpath>
+		    <value>
+    			<researchPrerequisites>
+      				<li>StandardSecurity</li>
+    			</researchPrerequisites>
+		    </value>
+		  </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="BlastTurretGunManned"]</xpath>
+        </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ThingDef[defName="GunComplex"]/researchPrerequisites</xpath>
+		    <value>
+    			<researchPrerequisites>
+      				<li>GasOperation</li>
+    			</researchPrerequisites>
+		    </value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ThingDef[defName="RocketComplex"]/researchPrerequisites</xpath>
+		    <value>
+    			<researchPrerequisites>
+      				<li>MicroelectronicsBasics</li>
+    			</researchPrerequisites>
+		    </value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ResearchProjectDef[defName="DevastatorMortar"]/prerequisites</xpath>
+		    <value>
+    			<prerequisites>
+					<li>SpacerSecurity</li>
+    			</prerequisites>          		
+			</value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ThingDef[defName="Turret_DevastatorMortarBomb"]/researchPrerequisites</xpath>
+		    <value>
+    			<researchPrerequisites>
+      				<li>SpacerSecurity</li>
+                    <li>Mortars</li>
+    			</researchPrerequisites>
+		    </value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ThingDef[defName="PlasmaPowerCell"]/recipeMaker/researchPrerequisites</xpath>
+		    <value>
+    			<researchPrerequisites>
+      				<li>SpacerSecurity</li>
+                    <li>Mortars</li>
+    			</researchPrerequisites>
+		    </value>
+		  </li>
+
+		</operations>
+	</Operation>
+</Patch>
+

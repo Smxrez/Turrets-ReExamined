@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+		  <li Class="PatchOperationAdd">
+        	<xpath>Defs/ResearchProjectDef[defName="VFED_ImperialDefenses"]/prerequisites</xpath>
+		    <value>
+					<li>SniperTurret</li>      		
+			</value>
+		  </li>
+		</operations>
+	</Operation>
+</Patch>
+

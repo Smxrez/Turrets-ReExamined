@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+		  <li Class="PatchOperationRemove">
+        	<xpath>Defs/ThingDef[defName="Turret_TearTurret"]/researchPrerequisites</xpath>
+		    <value>
+    			<researchPrerequisites>
+      				<li>SniperTurret</li>
+					<li>VWE_NonLethal</li>
+    			</researchPrerequisites>
+		    </value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ThingDef[defName="Turret_TaserTurret"]/researchPrerequisites</xpath>
+		    <value>
+    			<researchPrerequisites>
+      				<li>StandardSecurity</li>
+					<li>VWE_NonLethal</li>
+    			</researchPrerequisites>
+		    </value>
+		  </li>
+		</operations>
+	</Operation>
+</Patch>
+
+
+

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ResearchProjectDef[defName="SniperTurret"]/prerequisites</xpath>
+		    <value>
+    			<prerequisites>
+					<li>StandardSecurity</li>
+      				<li>MultiAnalyzer</li>
+    			</prerequisites>          		
+			</value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ResearchProjectDef[defName="SniperTurret"]/hiddenPrerequisites</xpath>
+		    <value>
+    			<hiddenPrerequisites>
+      				<li>PrecisionRifling</li>
+    			</hiddenPrerequisites>       		
+			</value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ResearchProjectDef[defName="SniperTurret"]/description</xpath>
+		    <value>
+    			<description>Produce advanced automated turrets.</description>       		
+			</value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ResearchProjectDef[defName="GunTurrets"]/description</xpath>
+		    <value>
+    			<description>Produce basic automated turrets.</description>       		
+			</value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ResearchProjectDef[defName="GunTurrets"]/label</xpath>
+		    <value>
+          		<label>basic turrets</label>
+			</value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ResearchProjectDef[defName="GunTurrets"]/baseCost</xpath>
+		    <value>
+          		<baseCost>750</baseCost>
+			</value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ResearchProjectDef[defName="SniperTurret"]/label</xpath>
+		    <value>
+          		<label>advanced turrets</label>
+			</value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+        	<xpath>Defs/ResearchProjectDef[defName="SniperTurret"]/baseCost</xpath>
+		    <value>
+          		<baseCost>4000</baseCost>
+			</value>
+		  </li>
+  		  <li Class="PatchOperationConditional">
+            <xpath>/Defs//researchPrerequisites/li[text()="HeavyTurrets"]</xpath>
+    		<match Class="PatchOperationReplace">
+            <xpath>/Defs//researchPrerequisites/li[text()="HeavyTurrets"]</xpath>
+		    <value>
+      			<li>SniperTurret</li>
+		    </value>
+    		</match>
+  		  </li>
+  		  <li Class="PatchOperationConditional">
+            <xpath>/Defs//researchPrerequisite[text()="HeavyTurrets"]</xpath>
+    		<match Class="PatchOperationReplace">
+            <xpath>/Defs//researchPrerequisite[text()="HeavyTurrets"]</xpath>
+		    <value>
+      			<researchPrerequisite>SniperTurret</researchPrerequisite>
+		    </value>
+    		</match>
+  		  </li>
+  		  <li Class="PatchOperationConditional">
+            <xpath>/Defs//prerequisites/li[text()="HeavyTurrets"]</xpath>
+    		<match Class="PatchOperationReplace">
+            <xpath>/Defs//prerequisites/li[text()="HeavyTurrets"]</xpath>
+		    <value>
+      			<li>SniperTurret</li>
+		    </value>
+    		</match>
+  		  </li>
+  		  <li Class="PatchOperationConditional">
+            <xpath>/Defs//hiddenPrerequisites/li[text()="HeavyTurrets"]</xpath>
+    		<match Class="PatchOperationReplace">
+            <xpath>/Defs//hiddenPrerequisites/li[text()="HeavyTurrets"]</xpath>
+		    <value>
+      			<li>SniperTurret</li>
+		    </value>
+    		</match>
+  		  </li>
+  		  <li Class="PatchOperationConditional">
+            <xpath>/Defs//researchPrerequisites/li[text()="RocketswarmLauncher"]</xpath>
+    		<match Class="PatchOperationReplace">
+            <xpath>/Defs//researchPrerequisites/li[text()="RocketswarmLauncher"]</xpath>
+		    <value>
+      			<li>SniperTurret</li>
+		    </value>
+    		</match>
+  		  </li>
+  		  <li Class="PatchOperationConditional">
+            <xpath>/Defs//researchPrerequisite[text()="RocketswarmLauncher"]</xpath>
+    		<match Class="PatchOperationReplace">
+            <xpath>/Defs//researchPrerequisite[text()="RocketswarmLauncher"]</xpath>
+		    <value>
+      			<researchPrerequisite>SniperTurret</researchPrerequisite>
+		    </value>
+    		</match>
+  		  </li>
+  		  <li Class="PatchOperationConditional">
+            <xpath>/Defs//prerequisites/li[text()="RocketswarmLauncher"]</xpath>
+    		<match Class="PatchOperationReplace">
+            <xpath>/Defs//prerequisites/li[text()="RocketswarmLauncher"]</xpath>
+		    <value>
+      			<li>SniperTurret</li>
+		    </value>
+    		</match>
+  		  </li>
+  		  <li Class="PatchOperationConditional">
+            <xpath>/Defs//hiddenPrerequisites/li[text()="RocketswarmLauncher"]</xpath>
+    		<match Class="PatchOperationReplace">
+            <xpath>/Defs//hiddenPrerequisites/li[text()="RocketswarmLauncher"]</xpath>
+		    <value>
+      			<li>SniperTurret</li>
+		    </value>
+    		</match>
+  		  </li>
+        <li Class="PatchOperationAttributeAdd">
+               <xpath>Defs/ResearchProjectDef[defName="HeavyTurrets"]</xpath>
+               <attribute>Abstract</attribute>
+               <value>True</value>
+         </li>
+        <li Class="PatchOperationAttributeAdd">
+               <xpath>Defs/ResearchProjectDef[defName="RocketswarmLauncher"]</xpath>
+               <attribute>Abstract</attribute>
+               <value>True</value>
+         </li>
+		</operations>
+	</Operation>
+</Patch>

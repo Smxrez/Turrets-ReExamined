@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+		  <Operation Class="PatchOperationReplace">
+        	<xpath>Defs/ThingDef[defName="VFES_Turret_FloorTurretCharge"]/researchPrerequisites</xpath>
+		    <value>
+    			<researchPrerequisites Inherit="False">
+      				<li>VFES_ConcealedDefenses</li>
+      				<li>SpacerSecurity</li>
+    			</researchPrerequisites>
+		    </value>
+	      </Operation>
+</Patch>
+
+

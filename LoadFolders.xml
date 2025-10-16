@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<loadFolders>
+  <v1.5>
+	<li>/</li>
+	<li>1.5</li>
+    <li IfModActive="xmb.ancientminingindustry.mo">1.5/Mods/AMI</li>
+    <li IfModActive="smxrez.securityreexamined">1.5/Mods/VFESecRE</li>
+    <li IfModActive="vanillaexpanded.vfesecurity">1.5/Mods/VFESec</li>
+    <li IfModActive="rah.rvte">1.5/Mods/RahVT</li>
+    <li IfModActive="oskarpotocki.vfe.deserters">1.5/Mods/VFEDes</li>
+    <li IfModActive="smxrez.laserreexamined">1.5/Mods/LWRE</li>
+    <li IfModActive="smxrez.nonlethalreexamined">1.5/Mods/NLRE</li>
+    <li IfModActive="oskarpotocki.vfe.mechanoid">1.5/Mods/VFEMech</li>
+    <li IfModActive="rimeffectrenegade.core">1.5/Mods/RECore</li>
+  </v1.5>
+  <v1.6>
+	<li>/</li>
+	<li>1.6</li>
+    <li IfModActive="xmb.ancientminingindustry.mo">1.6/Mods/AMI</li>
+    <li IfModActive="rah.rvte">1.6/Mods/RahVT</li>
+    <li IfModActive="oskarpotocki.vfe.deserters">1.6/Mods/VFEDes</li>
+    <li IfModActive="smxrez.laserreexamined">1.6/Mods/LaserRE</li>
+    <li IfModActive="smxrez.nonlethalreexamined">1.6/Mods/NLRE</li>
+    <li IfModActive="oskarpotocki.vfe.mechanoid">1.6/Mods/VFEMech</li>
+    <li IfModActive="rimeffectrenegade.core">1.6/Mods/RECore</li>
+    <li IfModActive="sarg.alphagenes">1.6/Mods/AlphaGenes</li>
+  </v1.6>
+</loadFolders>

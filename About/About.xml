@@ -1,0 +1,32 @@
+<ModMetaData>
+	<packageId>Smxrez.turretsrexamined</packageId>
+	<name>Turrets: Re-Examined</name>
+	<author>Smxrez</author>
+	<supportedVersions>
+		<li>1.5</li>
+		<li>1.6</li>
+	</supportedVersions>
+	<modDependencies>
+	<li>
+		<packageId>rah.rvte</packageId>
+		<displayName>Rah's Vanilla Turrets Expansion</displayName>
+		<steamWorkshopUrl>steam://url/CommunityFilePage/2583529720</steamWorkshopUrl>
+	</li>
+	</modDependencies>
+	<description>Overhauls Rah's VFESec's and Vanilla's turret progression</description>
+	<loadAfter>
+		<li>oskarpotocki.vfe.deserters</li>
+		<li>xmb.ancientminingindustry.mo</li>
+		<li>sarg.alphamechs</li>
+		<li>vanillaexpanded.vfesecurity</li>
+		<li>rah.rvte</li>
+		<li>smxrez.securityreexamined</li>
+		<li>smxrez.laserreexamined</li>
+		<li>smxrez.nonlethalreexamined</li>
+		<li>vanillaexpanded.vwehw</li>
+		<li>oskarpotocki.vfe.mechanoid</li>
+		<li>sirvan.mvtretexture</li>
+		<li>reel.turretpipeline</li>
+		<li>sarg.alphaprefabs</li>
+	</loadAfter>
+</ModMetaData>
