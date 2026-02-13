@@ -47,6 +47,11 @@
                <attribute>Abstract</attribute>
                <value>True</value>
          </li>
+        <li Class="PatchOperationAttributeAdd">
+               <xpath>Defs/ThingDef[defName="ChargeCannon"]</xpath>
+               <attribute>Abstract</attribute>
+               <value>True</value>
+         </li>
 		  <li Class="PatchOperationRemove">
         	<xpath>Defs/ThingDef[defName="PrecisionTurretGun"]/comps/li[@Class="CompProperties_Glower"]</xpath>
 		  </li>
@@ -381,12 +386,6 @@
     			</researchPrerequisites>
 		    </value>
 		  </li>
-		  <li Class="PatchOperationReplace">
-        	<xpath>Defs/ThingDef[defName="MilitaryTurretGun"]/label</xpath>
-		    <value>
-          		<label>refined mini-turret</label>
-			</value>
-		  </li>
         <li Class="PatchOperationRemove">
           <xpath>Defs/ThingDef[defName="MilitaryTurretGunManned"]</xpath>
         </li>
@@ -466,7 +465,12 @@
     			</researchPrerequisites>
 		    </value>
 		  </li>
-
+		  <li Class="PatchOperationAdd">
+		    <xpath>/Defs/ThingDef[defName = "VFES_Turret_Searchlight"]/researchPrerequisites</xpath>
+		    <value>
+					<li>ColoredLights</li>
+		    </value>
+		  </li>
 		</operations>
 	</Operation>
 </Patch>

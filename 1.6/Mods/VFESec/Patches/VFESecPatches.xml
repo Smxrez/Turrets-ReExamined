@@ -3,19 +3,10 @@
 	<Operation Class="PatchOperationSequence">
 		<operations>
 		  <li Class="PatchOperationReplace">
-        	<xpath>Defs/ThingDef[defName="VFES_Turret_ChargeComplex"]/researchPrerequisites</xpath>
+        	<xpath>Defs/ThingDef[defName="VFES_Complex_Charge"]/researchPrerequisites</xpath>
 		    <value>
     			<researchPrerequisites>
       				<li>ChargedShot</li>
-    			</researchPrerequisites>
-		    </value>
-		  </li>
-		  <li Class="PatchOperationReplace">
-        	<xpath>Defs/ThingDef[defName="VFES_Turret_SentryGun"]/researchPrerequisites</xpath>
-		    <value>
-    			<researchPrerequisites>
-      				<li>StandardSecurity</li>
-					<li>MultibarrelWeapons</li>
     			</researchPrerequisites>
 		    </value>
 		  </li>
@@ -28,7 +19,7 @@
 		    </value>
 		  </li>
 		  <li Class="PatchOperationReplace">
-		    <xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeRailgunTurret"]/researchPrerequisites</xpath>
+		    <xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeRailgun"]/researchPrerequisites</xpath>
 		    <value>
 				<researchPrerequisites>
 					<li>SpacerSecurity</li>
@@ -36,7 +27,7 @@
 		    </value>
 		  </li>
 		  <li Class="PatchOperationReplace">
-		    <xpath>/Defs/ThingDef[defName = "VFES_Turret_EMPTurret"]/researchPrerequisites</xpath>
+		    <xpath>/Defs/ThingDef[defName = "VFES_Turret_TeslaBlaster"]/researchPrerequisites</xpath>
 		    <value>
 				<researchPrerequisites>
 					<li>SpacerSecurity</li>
@@ -50,54 +41,19 @@
 		    </value>
 		  </li>
 		  <li Class="PatchOperationAdd">
+		    <xpath>/Defs/ThingDef[defName = "VFES_Turret_AutomatedMortar"]/researchPrerequisites</xpath>
+		    <value>
+					<li>StandardSecurity</li>
+		    </value>
+		  </li>
+		  <li Class="PatchOperationAdd">
 		    <xpath>/Defs/ThingDef[defName = "VFES_Turret_Flame"]/researchPrerequisites</xpath>
 		    <value>
 					<li>BiofuelRefining</li>
 		    </value>
 		  </li>
         <li Class="PatchOperationAttributeAdd">
-               <xpath>Defs/ResearchProjectDef[defName="VFES_SentryGuns"]</xpath>
-               <attribute>Abstract</attribute>
-               <value>True</value>
-         </li>
-  		  <li Class="PatchOperationConditional">
-            <xpath>/Defs//researchPrerequisites/li[text()="VFES_PulseChargedDefenses"]</xpath>
-    		<match Class="PatchOperationReplace">
-            <xpath>/Defs//researchPrerequisites/li[text()="VFES_PulseChargedDefenses"]</xpath>
-		    <value>
-      			<li>SpacerSecurity</li>
-		    </value>
-    		</match>
-  		  </li>
-  		  <li Class="PatchOperationConditional">
-            <xpath>/Defs//researchPrerequisite[text()="VFES_PulseChargedDefenses"]</xpath>
-    		<match Class="PatchOperationReplace">
-            <xpath>/Defs//researchPrerequisite[text()="VFES_PulseChargedDefenses"]</xpath>
-		    <value>
-      			<researchPrerequisite>SpacerSecurity</researchPrerequisite>
-		    </value>
-    		</match>
-  		  </li>
-  		  <li Class="PatchOperationConditional">
-            <xpath>/Defs//prerequisites/li[text()="VFES_PulseChargedDefenses"]</xpath>
-    		<match Class="PatchOperationReplace">
-            <xpath>/Defs//prerequisites/li[text()="VFES_PulseChargedDefenses"]</xpath>
-		    <value>
-      			<li>SpacerSecurity</li>
-		    </value>
-    		</match>
-  		  </li>
-  		  <li Class="PatchOperationConditional">
-            <xpath>/Defs//hiddenPrerequisites/li[text()="VFES_PulseChargedDefenses"]</xpath>
-    		<match Class="PatchOperationReplace">
-            <xpath>/Defs//hiddenPrerequisites/li[text()="VFES_PulseChargedDefenses"]</xpath>
-		    <value>
-      			<li>SpacerSecurity</li>
-		    </value>
-    		</match>
-  		  </li>
-        <li Class="PatchOperationAttributeAdd">
-               <xpath>Defs/ResearchProjectDef[defName="VFES_PulseChargedDefenses"]</xpath>
+               <xpath>Defs/ResearchProjectDef[defName="VFES_EMPCannon"]</xpath>
                <attribute>Abstract</attribute>
                <value>True</value>
          </li>
@@ -106,13 +62,8 @@
                <attribute>Abstract</attribute>
                <value>True</value>
          </li>
-        <li Class="PatchOperationAttributeAdd">
-               <xpath>Defs/ResearchProjectDef[defName="VFES_EMPCannon"]</xpath>
-               <attribute>Abstract</attribute>
-               <value>True</value>
-         </li>
 		  <li Class="PatchOperationAdd">
-        	<xpath>Defs/ThingDef[defName="VFES_Turret_EMPTurret"]/comps</xpath>
+        	<xpath>Defs/ThingDef[defName="VFES_Turret_TeslaBlaster"]/comps</xpath>
 			<value>
 			    <li Class="CompProperties_Glower">
         			<glowRadius>10</glowRadius>
@@ -121,7 +72,7 @@
 	  		</value>
 		  </li>
 		  <li Class="PatchOperationAdd">
-        	<xpath>Defs/ThingDef[defName="VFES_Turret_ChargeComplex"]/comps</xpath>
+        	<xpath>Defs/ThingDef[defName="VFES_Complex_Charge"]/comps</xpath>
 			<value>
 			    <li Class="CompProperties_Glower">
         			<glowRadius>6</glowRadius>
@@ -139,7 +90,7 @@
 	  		</value>
 		  </li>
 		  <li Class="PatchOperationAdd">
-        	<xpath>Defs/ThingDef[defName="VFES_Turret_ChargeRailgunTurret"]/comps</xpath>
+        	<xpath>Defs/ThingDef[defName="VFES_Turret_ChargeRailgun"]/comps</xpath>
 			<value>
 			    <li Class="CompProperties_Glower">
         			<glowRadius>10</glowRadius>
@@ -175,131 +126,11 @@
     			</researchPrerequisites>
 		    </value>
 		  </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Turret_MilitaryTurret"]/label</xpath>
-		            <value>
-						<label>Double mini-turret</label>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Gun_SentryTurret"]/verbs/li/burstShotCount</xpath>
-		            <value>
-                    	<burstShotCount>15</burstShotCount>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Gun_SentryTurret"]/verbs/li/ticksBetweenBurstShots</xpath>
-		            <value>
-                    	<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Turret_SentryGun"]/comps/li[@Class="CompProperties_Refuelable"]/fuelMultiplier</xpath>
-		            <value>
-                    	<fuelMultiplier>1</fuelMultiplier>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Turret_SentryGun"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
-		            <value>
-                    	<fuelCapacity>200</fuelCapacity>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Turret_SentryGun"]/statBases/MaxHitPoints</xpath>
-		            <value>
-                    	<MaxHitPoints>150</MaxHitPoints>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Turret_Flame"]/statBases/Flammability</xpath>
-		            <value>
-                    	<Flammability>0</Flammability>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Turret_Flame"]/statBases/MaxHitPoints</xpath>
-		            <value>
-                    	<MaxHitPoints>150</MaxHitPoints>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/VFECore.ExpandableProjectileDef[defName = "VFES_Bullet_FlameTurret"]/minDistanceToAffect</xpath>
-		            <value>
-                    	<minDistanceToAffect>3</minDistanceToAffect>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Gun_FlameTurret"]/verbs/li/range</xpath>
-		            <value>
-                    	<range>12.9</range>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Bullet_DoubleChargeLance"]/projectile/armorPenetrationBase</xpath>
-		            <value>
-						<armorPenetrationBase>0.55</armorPenetrationBase>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Bullet_DoubleChargeLance"]/projectile/damageAmountBase</xpath>
-		            <value>
-						<damageAmountBase>75</damageAmountBase>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Bullet_DoubleChargeLance"]/projectile/speed</xpath>
-		            <value>
-						<speed>200</speed>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Gun_RailgunTurret"]/statBases/AccuracyTouch</xpath>
-		            <value>
-						<AccuracyTouch>0.40</AccuracyTouch>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Gun_RailgunTurret"]/statBases/AccuracyShort</xpath>
-		            <value>
-						<AccuracyShort>0.60</AccuracyShort>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Gun_RailgunTurret"]/statBases/AccuracyMedium</xpath>
-		            <value>
-						<AccuracyMedium>0.90</AccuracyMedium>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Gun_RailgunTurret"]/statBases/AccuracyLong</xpath>
-		            <value>
-						<AccuracyLong>0.80</AccuracyLong>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Gun_RailgunTurret"]/statBases/RangedWeapon_Cooldown</xpath>
-		            <value>
-                    	<RangedWeapon_Cooldown>9</RangedWeapon_Cooldown>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeRailgunTurret"]/costList</xpath>
-		            <value>
-    					<costList>
-      						<Steel>350</Steel>
-      						<Plasteel>60</Plasteel>
-      						<Uranium>80</Uranium>
-      						<ComponentSpacer>4</ComponentSpacer>
-    					</costList>
-		            </value>
-		        </li>
-		        <li Class="PatchOperationReplace">
-		            <xpath>/Defs/ThingDef[defName = "VFES_Turret_ChargeTurret"]/statBases/MaxHitPoints</xpath>
-		            <value>
-                    	<MaxHitPoints>300</MaxHitPoints>
-		            </value>
-		        </li>
+        <li Class="PatchOperationAttributeAdd">
+               <xpath>Defs/ThingDef[defName="VFES_Turret_MilitaryTurret"]</xpath>
+               <attribute>Abstract</attribute>
+               <value>True</value>
+         </li>
 		</operations>
 	</Operation>
 </Patch>
